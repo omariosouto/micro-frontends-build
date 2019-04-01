@@ -12,7 +12,7 @@
     "test": "lerna run test",
     "test:e2e": "echo 'Setup cypress and run from all projects'",
     "test:project": "echo 'Run all tests from specific projet'",
-    "start": "echo 'Run server reading all builds'"
+    "start": "lerna run startprod"
   },
   "workspaces": [
     "@caelum-front/*",

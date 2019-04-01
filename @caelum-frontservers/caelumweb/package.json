@@ -1,0 +1,12 @@
+{
+  "name": "caelumweb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "startprod" : "node ./server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
