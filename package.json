@@ -1,0 +1,24 @@
+{
+  "name": "micro-frontends-build",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "create": "echo 'Create a project with typescript'",
+    "project": "echo 'Rodar projeto via parâmetro'",
+    "components": "lerna run components",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "test:e2e": "echo 'Setup cypress and run from all projects'",
+    "test:project": "echo 'Run all tests from specific projet'",
+    "start": "echo 'Run server reading all builds'"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "lerna": "^3.13.1"
+  }
+}

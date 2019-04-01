@@ -1,0 +1,27 @@
+{
+  "name": "@caelum-front/design-system",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "yarn run storybook",
+    "components": "concurrently --names \"COMPONENTS,STORYBOOK\" -c \"bgBlue.bold,bgMagenta.bold\" \"yarn run watch-build\" \"yarn run storybook\"",
+    "watch-build": "nodemon --watch ./src --exec \"npm run build\" ",
+    "build": "rm -rf ./dist/**/** && NODE_ENV=production babel src/ --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__,stories.js",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@storybook/react": "^5.0.6",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10",
+    "react-scripts": "2.1.8"
+  }
+}
