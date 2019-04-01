@@ -15,7 +15,9 @@
     "start": "echo 'Run server reading all builds'"
   },
   "workspaces": [
-    "packages/*"
+    "@caelum-front/*",
+    "@caelum-frontprojects/*",
+    "@caelum-frontservers/*"
   ],
   "devDependencies": {
     "husky": "^1.3.1",
